@@ -1,0 +1,5 @@
+cie/assessment/base/BrowserPerClassTest.class
+cie/assessment/util/CieProxy.class
+cie/assessment/LoginTest.class
+cie/assessment/util/CieWebBrowser.class
+cie/assessment/util/WebDriverFactory.class

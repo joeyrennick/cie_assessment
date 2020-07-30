@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Command line suite]" verbose="0">
+  <test name="Command line test" preserve-order="false">
+    <classes>
+      <class name="cie.assessment.LoginTest"/>
+      <class name="cie.assessment.base.BrowserPerClassTest"/>
+    </classes>
+  </test> <!-- Command line test -->
+  <test name="Command line test(failed)">
+    <classes>
+      <class name="cie.assessment.LoginTest">
+        <methods>
+          <include name="loginBasic"/>
+          <include name="beforeClassBrowserTest"/>
+        </methods>
+      </class> <!-- cie.assessment.LoginTest -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [Command line suite] -->
