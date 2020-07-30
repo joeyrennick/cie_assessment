@@ -1,13 +1,9 @@
 package cie.assessment.base;
 
 import cie.assessment.util.CommonUIElementHelpers;
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.InvalidElementStateException;
-import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public class WebPage {
 

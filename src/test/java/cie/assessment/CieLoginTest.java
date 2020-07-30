@@ -10,20 +10,19 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class LoginTest extends BrowserPerClassTest {
+public class CieLoginTest extends BrowserPerClassTest {
+
+    private static final String EMAIL = "hello@ciedigital.com";
+    private static final String PASSWORD = "hello@ciedigital.com";
 
     @Test
     public void loginBasic() {
-
-        String email = "hello@ciedigital.com";
-        String password = "Test 1234";
-
         WebDriver driver = getDriver();
         CieLoginPage cieLoginPage = new CieLoginPage(driver);
         LandingPage landingPage = new LandingPage(driver);
 
         try {
-            cieLoginPage.loginCie(email, password);
+            cieLoginPage.loginCie(EMAIL, PASSWORD);
         } catch (TimeoutException e) {
             Assert.fail("Timeout encountered while trying to login");
         }
