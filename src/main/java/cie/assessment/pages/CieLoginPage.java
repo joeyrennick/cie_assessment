@@ -2,7 +2,6 @@ package cie.assessment.pages;
 
 import cie.assessment.base.WebPage;
 import cie.assessment.util.CommonUIElementHelpers;
-import net.lightbody.bmp.proxy.jetty.log.LogImpl;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,9 +9,9 @@ import org.openqa.selenium.support.PageFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class LoginPage extends WebPage {
+public class CieLoginPage extends WebPage {
 
-    private static final Logger logger = LoggerFactory.getLogger(LoginPage.class);
+    private static final Logger logger = LoggerFactory.getLogger(CieLoginPage.class);
     private static final String LOCATOR_LOGIN_FORM = "#login_form";
 
     @FindBy(css = LOCATOR_LOGIN_FORM)
@@ -27,18 +26,18 @@ public class LoginPage extends WebPage {
     @FindBy(id = "login-login-button")
     private WebElement buttonLogin;
 
-    public LoginPage(WebDriver driver) {
+    public CieLoginPage(WebDriver driver) {
         super(driver);
         PageFactory.initElements(driver, this);
         //We would want to have some sort of verification of navigation here
         //verifyNavigation(loginForm);
     }
 
-    public LoginPage loginCie(String email, String password) {
+    public CieLoginPage loginCie(String email, String password) {
         setEmail(driver, email);
         setPassword(driver, password);
         clickLogin(driver);
-        return new LoginPage(driver);
+        return new CieLoginPage(driver);
     }
 
     /**

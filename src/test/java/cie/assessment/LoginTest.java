@@ -2,7 +2,7 @@ package cie.assessment;
 
 import cie.assessment.base.BrowserPerClassTest;
 import cie.assessment.pages.LandingPage;
-import cie.assessment.pages.LoginPage;
+import cie.assessment.pages.CieLoginPage;
 import cie.assessment.util.CommonUIElementHelpers;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
@@ -19,11 +19,11 @@ public class LoginTest extends BrowserPerClassTest {
         String password = "Test 1234";
 
         WebDriver driver = getDriver();
-        LoginPage loginPage = new LoginPage(driver);
+        CieLoginPage cieLoginPage = new CieLoginPage(driver);
         LandingPage landingPage = new LandingPage(driver);
 
         try {
-            loginPage.loginCie(email, password);
+            cieLoginPage.loginCie(email, password);
         } catch (TimeoutException e) {
             Assert.fail("Timeout encountered while trying to login");
         }
